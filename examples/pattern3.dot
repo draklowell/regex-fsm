@@ -1,0 +1,13 @@
+digraph G {
+rankdir=LR;
+node [shape=circle];
+  S0 -> S1 [label="Not(Range(a-z))"];
+  S1 [shape=doublecircle];
+  S1 -> S2 [label="Not(Range(a-z))"];
+  S1 -> S3 [label="Range(A-Z)"];
+  S2 [shape=doublecircle];
+  S2 -> S2 [label="Not(Range(a-z))"];
+  S2 -> S3 [label="Range(A-Z)"];
+  S3 [shape=doublecircle];
+  S3 -> S3 [label="Range(A-Z)"];
+}

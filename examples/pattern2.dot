@@ -1,0 +1,12 @@
+digraph G {
+rankdir=LR;
+node [shape=circle];
+  S0 -> S1 [label="Or(In('h', 's'), Range(a-z))"];
+  S0 -> S2 [label="Not(Range(a-z))"];
+  S1 -> S1 [label="Or(In('h', 's'), Range(a-z))"];
+  S1 -> S2 [label="Not(Range(a-z))"];
+  S2 [shape=doublecircle];
+  S2 -> S3 [label="Not(Range(a-z))"];
+  S3 [shape=doublecircle];
+  S3 -> S3 [label="Not(Range(a-z))"];
+}

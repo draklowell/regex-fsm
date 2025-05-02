@@ -1,0 +1,17 @@
+digraph G {
+rankdir=LR;
+node [shape=circle];
+  S0 -> S1 [label="Range(a-c)"];
+  S1 -> S2 [label="Range(a-c)"];
+  S1 -> S3 [label="Range(d-f)"];
+  S2 -> S2 [label="Range(a-c)"];
+  S2 -> S3 [label="Range(d-f)"];
+  S3 [shape=doublecircle];
+  S3 -> S4 [label="Range(d-f)"];
+  S3 -> S5 [label="Range(g-i)"];
+  S4 [shape=doublecircle];
+  S4 -> S4 [label="Range(d-f)"];
+  S4 -> S5 [label="Range(g-i)"];
+  S5 [shape=doublecircle];
+  S5 -> S5 [label="Range(g-i)"];
+}
